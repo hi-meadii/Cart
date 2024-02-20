@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Cards from './Cards';
+import './index.css';
+import Sdata from './Sdata';
+import { useState } from "react";
+import ReactModal from 'react-modal';
 
-function App() {
+
+const App = () => {
+  const [cards,setcard]=useState(Sdata);
+
+  function removeCard(id){
+    const newCard=cards.filter(card => card.id !== id);
+    setcard(newCard);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className="App">
+   <Cards cards={cards} removeCard={removeCard} ></Cards>
+  </div>
   );
-}
+};
 
 export default App;

@@ -1,13 +1,80 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #d1cfcf;
+  border: 1px solid #d1cfcf;
+  opacity: 65%;
+  margin: 1rem;
+}
+.card_img{
+  width: 80%;
+  margin: 10%;
+  margin-bottom: 0;
+}
+
+.card_info{
+  padding: 5%; 
+  background-color: white;
+}
+
+.card_name{
+  margin: 2%;
+  line-height: 21px;
+  font-size: 17px;
+  font-weight: bold;
+}
+.card_email{
+  margin: 2%;
+  line-height: 21px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+.card_phone{
+  margin: 2%;
+  line-height: 21px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+.card_link{
+  margin: 2%;
+  line-height: 21px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.icons{
+  background-color: #d1cfcf;
+  opacity: 65%;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 5%;
+}
+.icon{
+  outline: none;
+  cursor: pointer;
+}
+.contain{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
